@@ -1,0 +1,63 @@
+.items {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+
+  &-result {
+    padding-top: 1.5rem;
+    width: 80%;
+
+    &__box {
+      border-right: 5px solid #444fa0;
+      padding: 1rem;
+      background: #fff;
+      height: 45px;
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      border-radius: 0.3rem;
+      margin: 1rem auto;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      &.invest {
+        border-right: 5px solid #2146c7;
+      }
+      &.expense {
+        border-right: 5px solid #d9376e;
+      }
+      &.savings {
+        border-right: 5px solid #ffcd56;
+      }
+
+      h5 {
+        margin: 0;
+      }
+    }
+  }
+  &-chart {
+    padding: 2rem 0;
+    position: relative;
+
+    &__data {
+      display: flex;
+      align-items: center;
+      position: absolute;
+      content: "";
+      top: 45%;
+      right: 28%;
+
+      h5 {
+        margin: 0;
+        font-weight: bold;
+        color: #444;
+      }
+    }
+  }
+
+  @media screen and (max-width: 998px) {
+    width: 90%;
+    margin: 1rem auto;
+  }
+}
